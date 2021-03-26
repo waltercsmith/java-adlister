@@ -9,7 +9,7 @@
 
 <nav>
     <div class="nav-wrapper">
-        <a href="#" class="brand-logo">Logo</a>
+        <a href="#" class="brand-logo">ADILISTER</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="/login.jsp">Login</a></li>
             <li><a href="/profile.jsp">Profile</a></li>
