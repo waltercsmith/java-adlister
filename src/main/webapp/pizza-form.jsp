@@ -6,7 +6,7 @@
 </head>
 <body>
 
-    <form action="/pizza-order" method="post">
+    <form action="/pizza-order" method="POST">
 
 
         <select name="crust_types" id="crust_types">
@@ -30,7 +30,7 @@
 
         <br>
 
-    </form>
+
 
 
 
@@ -45,6 +45,8 @@
     <label for="beef">Beef</label><input name="toppings" id="beef" type="checkbox" value="beef">
 
 
+        <br>
+
     <label for="address"> Address</label><input id="address" name="address" type="text">
 
     <br>
@@ -52,6 +54,7 @@
 
     <input type="submit" value="Place Order">
 
+    </form>
 
 </body>
 </html>

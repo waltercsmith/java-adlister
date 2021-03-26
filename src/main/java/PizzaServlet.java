@@ -12,4 +12,10 @@ public class PizzaServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         request.getRequestDispatcher("pizza-form.jsp").forward(request,response);
     }
+
+    protected void doPost(HttpServletRequest request,HttpServletResponse response) throws IOException, ServletException{
+        String crustType = request.getParameter("crust_types");
+
+        System.out.println(crustType);
+    }
 }
