@@ -21,6 +21,7 @@
 <head>
     <title>Title</title>
     <link href="" rel="stylesheet" type="text/css">
+    <jsp:include page="partials/stylesheets.jsp"/>
 
 </head>
 <body>
@@ -63,6 +64,6 @@
 <%--</form>--%>
 
 
-<script src=""></script>
+<jsp:include page="partials/scripts.jsp"/>
 </body>
 </html>

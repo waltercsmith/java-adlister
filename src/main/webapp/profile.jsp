@@ -10,6 +10,8 @@
 <html>
 <head>
     <title>Profile Page</title>
+    <jsp:include page="partials/stylesheets.jsp"/>
+
 </head>
 <body>
 
@@ -25,6 +27,7 @@
         </c:otherwise>
     </c:choose>
 
+    <jsp:include page="partials/scripts.jsp"/>
 
 </body>
 </html>
