@@ -45,7 +45,10 @@
     <label for="beef">Beef</label><input name="toppings" id="beef" type="checkbox" value="beef">
 
 
+    <label for="address"> Address</label><input id="address" name="address" type="text">
 
+
+    <input type="submit" value="Place Order">
 
 
 </body>
