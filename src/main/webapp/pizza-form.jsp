@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: wallysmith
-  Date: 3/26/21
-  Time: 12:18 PM
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -29,10 +23,9 @@
         </select>
     </form>
 
-    <input id="pepperoni" type="checkbox" value="pepperoni">
-    <input id="chicken" type="checkbox" value="chicken">
-    <input id="beef" type="checkbox" value="beef">
-    <input id="sausage" type="checkbox" value="sausage">
+    <label for="pepperoni">Pepperoni</label><input name="toppings" id="pepperoni" type="checkbox" value="pepperoni">
+    <label for="chicken">Chicken</label><input name="toppings" id="chicken" type="checkbox" value="chicken">
+    <label for="beef">Beef</label><input name="toppings" id="beef" type="checkbox" value="beef">
 
 
 
