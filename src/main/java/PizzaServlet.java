@@ -15,6 +15,9 @@ public class PizzaServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request,HttpServletResponse response) throws IOException, ServletException{
         String crustType = request.getParameter("crust_types");
+        String sauceType = request.getParameter("sauce-type");
+        String PieType = request.getParameter("size");
+
 
         System.out.println(crustType);
     }
