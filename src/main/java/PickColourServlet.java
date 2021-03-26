@@ -16,7 +16,7 @@ public class PickColourServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         String favoriteColour = request.getParameter("favorite-colour");
 
-
+        response.sendRedirect("/viewcolour?favorite-colour=" + favoriteColour);
 
 
     }
