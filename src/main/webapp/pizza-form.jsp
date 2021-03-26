@@ -29,6 +29,14 @@
         </select>
     </form>
 
+    <input id="pepperoni" type="checkbox" value="pepperoni">
+    <input id="chicken" type="checkbox" value="chicken">
+    <input id="beef" type="checkbox" value="beef">
+    <input id="sausage" type="checkbox" value="sausage">
+
+
+
+
 
 </body>
 </html>
