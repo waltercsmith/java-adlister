@@ -15,6 +15,16 @@
 
     <h1>This is the Profile page!</h1>
 
+    <c:choose>
+        <c:when test="${param.containsKey('username')}">
+            <p>Hello there ${param.username}</p>
+        </c:when>
+
+        <c:otherwise>
+            <p>You're not authorized to be here!</p>
+        </c:otherwise>
+    </c:choose>
+
 
 </body>
 </html>

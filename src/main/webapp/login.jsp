@@ -9,9 +9,10 @@
 <%
     if (request.getMethod().equals("POST")) {
         if (request.getParameter("username").equals("admin") && request.getParameter("password").equals("jeetkundo")) {
-            response.sendRedirect("/profile.jsp");
+            response.sendRedirect("/profile.jsp?username=" + request.getParameter("username"));
+        } else {
+            response.sendRedirect("/login.jsp");
         }
-        response.sendRedirect("/login.jsp");
     }
 
 %>
