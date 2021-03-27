@@ -7,6 +7,9 @@ import java.util.Date;
 //    JavaBean or model for album entity
 public class Album implements Serializable {
 
+
+
+    private int id;
     private String artist;
     private String name;
     private Date release_Date;
@@ -17,6 +20,14 @@ public class Album implements Serializable {
 
 //        getters and setters below
 
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getArtist() {
         return artist;
