@@ -12,13 +12,13 @@ public class Album implements Serializable {
     private int id;
     private String artist;
     private String name;
-    private Date release_Date;
-    private double sales;
+    private int release_Date;
+    private float sales;
     private String genre;
 
     public Album(){ } //    <--- Empty constructor is  REQUIRED!!!
 
-    public Album(int id, String artist, String name, Date release_Date, double sales, String genre){
+    public Album(int id, String artist, String name, int release_Date, float sales, String genre){
 
         this.id = id;
         this.artist = artist;
@@ -55,11 +55,11 @@ public class Album implements Serializable {
         this.name = name;
     }
 
-    public Date getRelease_Date() {
+    public int getRelease_Date() {
         return release_Date;
     }
 
-    public void setRelease_Date(Date release_Date) {
+    public void setRelease_Date(int release_Date) {
         this.release_Date = release_Date;
     }
 
@@ -67,7 +67,7 @@ public class Album implements Serializable {
         return sales;
     }
 
-    public void setSales(double sales) {
+    public void setSales(float sales) {
         this.sales = sales;
     }
 
