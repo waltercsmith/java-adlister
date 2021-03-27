@@ -1,7 +1,7 @@
 package models;
 
 import java.io.Serializable;
-import java.util.Date;
+
 
 
 //    JavaBean or model for album entity
