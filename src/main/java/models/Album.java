@@ -16,7 +16,17 @@ public class Album implements Serializable {
     private double sales;
     private String genre;
 
-    public Album(){ }
+    public Album(){ } //    <--- Empty constructor is  REQUIRED!!!
+
+    public Album(int id, String artist, String name, Date release_Date, double sales, String genre){
+
+        this.id = id;
+        this.artist = artist;
+        this.name = name;
+        this.release_Date = release_Date;
+        this.sales = sales;
+        this.genre = genre;
+    }
 
 //        getters and setters below
 
