@@ -10,7 +10,8 @@ import java.util.List;
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        List<Ad> adList = DaoFactory.getAdsDao().all();
+        request.setAttribute("ads",adList);
 
         request.getRequestDispatcher("/ads/index.jsp").forward(request,response);
 
