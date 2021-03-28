@@ -16,5 +16,8 @@ import java.util.List;
         request.getRequestDispatcher("/ads/index.jsp").forward(request,response);
 
     }
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+    }
 }
