@@ -1,12 +1,10 @@
 package com.codeup.adlister.dao;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
+import java.sql.*;
+
 import com.mysql.cj.jdbc.Driver;
 
 
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.List;
 
 public class MySQLAdsDao implements Ads {
@@ -37,7 +35,7 @@ public class MySQLAdsDao implements Ads {
 
         try {
             Statement statement = connection.createStatement();
-            statement.executeQuery("select * from ads");
+            ResultSet rs = statement.executeQuery("select * from ads");
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
