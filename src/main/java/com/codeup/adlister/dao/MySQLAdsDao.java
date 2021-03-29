@@ -39,6 +39,50 @@ public class MySQLAdsDao implements Ads {
     }
 
     @Override
+    public Long update(Ad ad){
+        try {
+            String updatetQuery = "UPDATE ads SET user_id =?, title = ?, description = ? WHERE adlister_db.ads.id = ?";
+            PreparedStatement stmt = connection.prepareStatement(updatetQuery, Statement.RETURN_GENERATED_KEYS);
+            stmt.setLong(1, ad.getUserId());
+            stmt.setString(2, ad.getTitle());
+            stmt.setString(3, ad.getDescription());
+            stmt.setLong(4,ad.getId());
+            stmt.executeUpdate();
+            ResultSet rs = stmt.getGeneratedKeys();
+            rs.next();
+            return rs.getLong(1);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error creating a new ad.", e);
+        }
+    }
+
+    @Override
+    public void destroy(Ad ad) {
+
+    }
+
+    @Override
+    public void delete(Long id) {
+
+    }
+
+
+    public void destroy(Long id){
+        try {
+            String destroyQuery = "DELETE FROM ads WHERE id =?";
+            PreparedStatement stmt = connection.prepareStatement(destroyQuery, Statement.RETURN_GENERATED_KEYS);
+            stmt.setLong(1, id);
+            stmt.executeUpdate();
+//            ResultSet rs = stmt.getGeneratedKeys();
+//            rs.next();
+//            return status;
+        } catch (SQLException e) {
+            throw new RuntimeException("Error deleting an ad #" + id, e);
+        }
+    }
+
+
+    @Override
     public Long insert(Ad ad) {
         try {
             String insertQuery = "INSERT INTO ads(user_id, title, description) VALUES (?, ?, ?)";
