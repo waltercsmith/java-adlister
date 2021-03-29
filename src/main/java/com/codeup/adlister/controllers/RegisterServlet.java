@@ -26,7 +26,12 @@ public class RegisterServlet extends HttpServlet {
 
         // TODO: ensure the submitted information is valid
 
+        boolean inputHasErrors = username.isEmpty() || email.isEmpty() || password.isEmpty();
 
+        if (inputHasErrors){
+            response.sendRedirect("/login?message=fields+cannot+be+empty");
+            return;
+        }
 
         User user = new User();
 
