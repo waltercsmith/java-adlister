@@ -6,15 +6,18 @@ import com.mysql.cj.jdbc.Driver;
 
 
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.List;
 
 public class MySQLAdsDao implements Ads {
+
+    private Connection connection;
 
     public MySQLAdsDao(Config config){
 
         try {
             DriverManager.registerDriver(new Driver());
-            Connection connection = DriverManager.getConnection(
+             connection = DriverManager.getConnection(
                     config.getUrl(),
                     config.getUser(),
                     config.getPassword()
@@ -32,8 +35,17 @@ public class MySQLAdsDao implements Ads {
     @Override
     public List<Ad> all() {
 
+        try {
+            Statement statement = connection.createStatement();
+            statement.executeQuery("select * from ads");
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
         return null;
     }
+
+
 
     @Override
     public Long insert(Ad ad) {
